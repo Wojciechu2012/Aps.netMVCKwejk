@@ -1,0 +1,40 @@
+﻿@model ImageTest.Models.ImageGallery
+
+@{
+    ViewBag.Title = "Upload";
+}
+<h2>Upload</h2>
+
+@using (Html.BeginForm("Upload", "ImageGallery", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{ 
+    @Html.ValidationSummary()
+    @Html.AntiForgeryToken()
+    <table>
+        <tr>
+            <td>Tytuł*:</td>
+            <td>@Html.TextBoxFor(Model =>Model.Title)</td>
+        </tr>
+        <tr>
+            <td>Obrazek* :</td>
+            <td>
+                @Html.TextBoxFor(Model => Model.File, new { type = "file" })                
+                @Html.ValidationMessage("CustomError")                
+            </td>
+            <td>
+                <input type="submit" value="Upload" />
+            </td>
+        </tr>
+    </table>
+        
+}
+
+@section Scripts{
+   @Scripts.Render("~/bundles");
+
+    
+}
+
+
+
+
+

@@ -1,0 +1,14 @@
+﻿@model ImageTest.Models.ImageGallery
+
+<h1>@Model.Title</h1>
+<hr />
+@if (Model.UzytkownikId != null)
+{
+
+    <h2> @Html.Action("GetName", "ImageGallery", new { id = Model.UzytkownikId })</h2>
+    
+}
+<div class="col-sm-2 col-sm-offset-5">
+    <a href='@Url.Action("ImageDetails","ImageGallery",new { id = Model.Id })'>  <img class="img-thumbnail" src="data:image/png;base64,@Convert.ToBase64String(Model.ImageData,0,Model.ImageData.Length)" style="max-width:400px" /></a>
+   
+</div>

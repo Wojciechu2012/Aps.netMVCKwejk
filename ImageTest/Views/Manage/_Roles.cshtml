@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Microsoft.AspNet.Identity.EntityFramework.IdentityRole>
+@{
+    ViewBag.Title = "_Roles";
+}
+
+@foreach (var role in Model)
+{
+
+    <p>
+        @Html.CheckBox(role.Name)
+        @role.Name;
+        
+    </p>
+}

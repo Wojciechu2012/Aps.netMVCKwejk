@@ -1,0 +1,31 @@
+﻿@model PagedList.IPagedList<ImageTest.Models.ImageGallery>
+  @using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Gallery</h2>
+
+@if (User.IsInRole("Admin"))
+{
+<p>       
+    @Html.ActionLink("Dodaj nowe zdjęcie", "Upload")
+</p>  
+}
+
+
+    @foreach (var item in Model)
+    {
+
+        <div class="row " style="margin-bottom:100px;">
+            <h2> @Html.Partial("_ImageDetails",item)</h2>
+        </div>
+    }
+
+ <br />
+Strona @(Model.PageCount<Model.PageNumber ?0 :Model.PageNumber) z @Model.PageCount
+@Html.PagedListPager(Model, page=>Url.Action("Index",new { page}))
+
+       
+
+

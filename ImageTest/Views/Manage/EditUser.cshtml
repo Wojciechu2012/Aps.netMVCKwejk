@@ -1,0 +1,29 @@
+﻿@model ImageTest.Models.Uzytkownik
+@{
+    ViewBag.Title = "EditUser";
+}
+
+
+<h2>EditUser</h2>
+
+<p class="text-info">@ViewBag.Message <p>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+    <input type="submit" value="Zapisz" />
+<table class="table table-bordered">
+    <tr>
+        <td>
+            @Html.TextBoxFor(modelItem => Model.UserName)
+        </td>
+     
+        <td>
+            @Html.TextBoxFor(modelItem => Model.Email)
+        </td>           
+
+    </tr>
+
+</table>
+        
+}

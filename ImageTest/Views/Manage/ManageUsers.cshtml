@@ -1,0 +1,19 @@
+﻿@model List<ImageTest.Models.Uzytkownik>
+@{
+    ViewBag.Title = "ManageUsers";
+}
+
+<h1>Edytuj użytkowników</h1>
+<table class="table table-striped"> 
+    <tr>
+        <th></th>
+        <th >Username</th>
+    </tr>
+@foreach (var objUser in Model)
+{
+    <tr>
+        <td >@Html.ActionLink("Edytuj","EditUser",new { id = objUser.UserName })</td>
+        <td >@objUser.UserName.ToString()</td>        
+    </tr>
+}
+ </table>

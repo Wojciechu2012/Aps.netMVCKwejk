@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="ImageGalleryTest.hostingasp.pl" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Luki\\documents\\visual\ studio\ 2015\\Projects\\ImageTest\\ImageTest\\obj\\Debug\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Luki\\documents\\visual\ studio\ 2015\\Projects\\ImageTest\\ImageTest\\obj\\Debug\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-ImageTest-20170213024734.mdf;Initial Catalog=aspnet-ImageTest-20170213024734;Integrated Security=True" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Luki\\documents\\visual\ studio\ 2015\\Projects\\ImageTest\\ImageTest\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="Website-Web.config Connection String" description="" value="Data Source=mssql5.webio.pl,2401;Database=wojciechuu1_wszystko;Uid=wojciechuu1_wojciech;Password=Raiden940929!;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Luki\\documents\\visual\ studio\ 2015\\Projects\\ImageTest\\ImageTest\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Website']/@connectionString" />
+  </parameter>
+</parameters>

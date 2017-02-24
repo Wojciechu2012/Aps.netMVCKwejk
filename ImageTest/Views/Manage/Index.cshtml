@@ -1,0 +1,50 @@
+﻿@model ImageTest.Models.IndexViewModel
+@{
+    ViewBag.Title = "Manage";
+}
+
+<h2>@ViewBag.Title.</h2>
+
+<p class="text-success">@ViewBag.StatusMessage</p>
+<div>
+    <h4>Zmien ustawienia konta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Password:</dt>
+        <dd>
+            [
+            @if (Model.HasPassword)
+            {
+                @Html.ActionLink("Change your password", "ChangePassword")
+            }
+            else
+            {
+                @Html.ActionLink("Create", "SetPassword")
+            }
+            ]
+        </dd>
+        <dt>Zarządzanie uzytkoniwkami:</dt>
+      
+         <dd> 
+            @if (User.IsInRole("Admin"))
+            {
+            @Html.ActionLink("Zarządzaj użytkownikami", "ManageUsers")
+            }else {
+            <h5>Opcje dostępne tylko dla administratorów</h5>} 
+          </dd>
+        <dt>Zarządzanie rolami:</dt>
+
+        <dd>
+            @if (User.IsInRole("Admin"))
+            {
+                @Html.ActionLink("Zarządzaj rolami", "RoleIndex")
+            }          
+            else
+            {
+                <h5>Opcje dostępne tylko dla administratorów</h5>}
+        </dd>
+      
+      
+    </dl>
+    
+</div>

@@ -1,0 +1,25 @@
+﻿@model Microsoft.AspNet.Identity.EntityFramework.IdentityRole
+@{
+    ViewBag.Title = "EditRole";
+}
+
+<h2>EditRole</h2>
+
+<div class="top">
+
+    @Html.ActionLink("Role", "RoleIndex") | @Html.ActionLink("Dodaj Role do uzytkownika", "RoleAddToUser")
+    
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <div>
+            Role Name
+        </div>
+        <p>@Html.TextBoxFor(m=>m.Name)</p>
+        <input type="submit" value="Save" />
+
+    }
+</div>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-ImageTest-20170213024734.mdf;Initial Catalog=aspnet-ImageTest-20170213024734;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Luki\\documents\\visual\ studio\ 2015\\Projects\\ImageTest\\ImageTest\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="Website-Web.config Connection String" description="Website Connection String used in web.config by the application to access the database." defaultValue="Data Source=mssql5.webio.pl,2401;Database=wojciechuu1_wszystko;Uid=wojciechuu1_wojciech;Password=Raiden940929!;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Luki\\documents\\visual\ studio\ 2015\\Projects\\ImageTest\\ImageTest\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Website']/@connectionString" />
+  </parameter>
+</parameters>

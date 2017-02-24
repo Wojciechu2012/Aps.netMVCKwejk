@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ImageTest.Models.Review>
+
+
+
+
+@foreach (var item in Model)
+{
+<div class="row">
+    <div class="col-sm-10 col-sm-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <strong>@item.Uzytkownik.UserName</strong> 
+                @if (User.Identity.Name == item.Uzytkownik.UserName || User.IsInRole("Admin"))
+                {
+                    @Html.ActionLink("Usuń", "RemoveReviews", "Reviews", new { id = item.Id, image = item.ImageGalleryId }, null)
+                    
+                }
+            </div>
+            <div class="panel-body">
+                @item.Message
+
+           
+
+            </div>
+        </div>
+    </div>
+    </div>
+}
+

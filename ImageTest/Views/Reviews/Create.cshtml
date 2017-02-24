@@ -1,0 +1,27 @@
+﻿@model ImageTest.Models.Review
+
+
+
+@if (User.Identity.IsAuthenticated)
+{
+    using (Html.BeginForm())
+    {
+    
+     @Html.ValidationSummary()
+     @Html.AntiForgeryToken()
+     <div class="form-group">
+         @Html.LabelFor(model => model.Message)
+         <div class="col-md-10">
+             @Html.EditorFor(model=>model.Message)
+         </div>
+     </div> 
+
+     @Html.HiddenFor(model => model.ImageGalleryId);
+        @Html.HiddenFor(model => model.UzytkownikId);
+
+
+        <input type="submit" value="Add Comment"  class="btn btn-default"/>
+    }
+    }else{
+        <div class="text">Zaloguj się, aby móc zostawić komentarz</div>
+}
